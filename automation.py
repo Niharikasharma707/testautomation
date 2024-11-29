@@ -45,7 +45,9 @@ def main():
     repo_a_commit = get_current_commit(REPO_A_PATH)
     repo_b_commit = get_current_commit(REPO_B_PATH)
     print(f"Repo A (commit: {repo_a_commit})")
-    print(f"Repo B (commit: {repo_b_commit})")
+    print(f"Repo B (commit: {repo_b_commit})")\
+      # Temporary directories for exports
+        # Temporary directories for exports
 
     # Export repositories
     print("Exporting repositories...")
