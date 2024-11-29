@@ -9,7 +9,7 @@ REPO_B_PATH = "/path/to/repo_b"
 # Output directory for diffs
 DIFF_OUTPUT_DIR = "./diff_output"
 
-# Function to run a shell command
+
 def run_command(command, cwd=None):
     try:
         result = subprocess.run(command, cwd=cwd, text=True, shell=True, check=True, stdout=subprocess.PIPE)
@@ -30,7 +30,9 @@ def export_repo_to_temp(repo_path, temp_dir):
         run_command(f"rm -rf {temp_dir}")
     run_command(f"git archive HEAD | tar -x -C {temp_dir}", cwd=repo_path)
     
+# Get the current commit hash in a repository
 
+# Compare two directories using diff
 def compare_repos(repo_a_temp, repo_b_temp, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     diff_file = os.path.join(output_dir, "repo_diff.patch")
