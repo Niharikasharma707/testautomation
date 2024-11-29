@@ -39,6 +39,7 @@ def compare_repos(repo_a_temp, repo_b_temp, output_dir):
 def main():
     # Temporary directories for exports
     repo_a_temp = "./repo_a_temp"
+      # Export repositories
     repo_b_temp = "./repo_b_temp"
 
     # Get commit hashes
@@ -52,6 +53,7 @@ def main():
     # Export repositories
     print("Exporting repositories...")
     export_repo_to_temp(REPO_A_PATH, repo_a_temp)
+      # Export repositories
     export_repo_to_temp(REPO_B_PATH, repo_b_temp)
 
     # Compare directories
